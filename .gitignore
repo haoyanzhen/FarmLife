@@ -2,13 +2,31 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+
+# vscode
+.vscode/
+*/.vscode/*
+
+# Unity
+/[Aa]ssets/*
+!/[Aa]ssets/Animation/
+!/[Aa]ssets/Resources/
+/[Aa]ssets/Resources/Pictures/*
+!/[Aa]ssets/Resources/Pictures/self/
+!/[Aa]ssets/Scenes/
+/[Aa]ssets/Scripts/
+
 /[Ll]ibrary/
-/[Tt]emp/
+/[Ll]ogs/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
-/[Ll]ogs/
+# /[Pp]ackages/
+# /[Pp]rojectSettings/
+/[Tt]emp/
 /[Uu]ser[Ss]ettings/
+
+*.meta
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
