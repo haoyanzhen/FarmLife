@@ -9,6 +9,7 @@ public class BagGridEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     GameObject bagItemPrefab, bagItem, bagItemDrag;
     string currentToolName;
     private Vector2 bagItemDraggingShift = new Vector2(30, 250);
+    int selfIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,8 @@ public class BagGridEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 bagTransform.GetComponent<BagEvent>().ChooseTool(bagItem);
             });
         }
+
+        selfIndex = (int)gameObject.name.Substring(7);
     }
 
     // Update is called once per frame
@@ -100,8 +103,11 @@ public class BagGridEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void ChangeBagItemSprite(string toolName)
     {
-        Debug.Log("Change: " + this.gameObject.name + "-" + toolName);
+        // Debug.Log("Change: " + this.gameObject.name + "-" + toolName);
         bagItem.GetComponent<Image>().sprite = Resources.Load<Sprite>("Pictures/self/" + toolName);
+        
+        //change self item name in bag event.
+        transform.parent.parent.GetComponent<BagEvent>().itemNames[selfIndex] = toolName;
     }
 
     public GameObject SearchBagItem()
