@@ -36,7 +36,7 @@ public class BagGridEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             });
         }
 
-        selfIndex = (int)gameObject.name.Substring(7);
+        selfIndex = int.Parse(gameObject.name.Substring(7));
     }
 
     // Update is called once per frame

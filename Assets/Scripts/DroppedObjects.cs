@@ -52,7 +52,7 @@ public class DroppedObjects : MonoBehaviour
             if (toPlayerDistance < autoPickupCheckOK)
             {
                 //auto pick up
-                if (bag.GetComponent<BagEvent>().AutoPickup(this.GetComponent<Image>.sprite.name))
+                if (bag.GetComponent<BagEvent>().AutoPickup(gameObject.GetComponent<SpriteRenderer>().sprite.name))
                 {
                     Destroy(this.gameObject);
                 }
@@ -72,5 +72,4 @@ public class DroppedObjects : MonoBehaviour
         }
 
     }
-
 }

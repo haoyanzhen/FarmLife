@@ -11,7 +11,9 @@ public class CharacterControl : MonoBehaviour
     // private Vector2 moveInput;
     public float moveSpeed = 5f;
     private Vector2 direction, postureDirection;
-    // private bool isGrounded = false;
+    
+    //reference to input actions
+    public CharacterAction characterAction;
 
     void Start()
     {

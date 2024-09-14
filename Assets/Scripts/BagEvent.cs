@@ -1,28 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BagEvent : MonoBehaviour
 {
     public GameObject owner;
     public string[] itemNames;
-    public GameObject[] bagGrids;
-    // Start is called before the first frame update
+    public List<GameObject> bagGrids;
+    
+
     void Start()
     {
         //initialize itemNames
-        itemNames = new string[];
+        itemNames = new string[30];
         for (int i = 0; i < 30; i++)
         {
-            itemNames.Add("Empty");
+            itemNames[i] = ("Empty");
         }
 
         //initialize bagGrids
         Transform[] allChildren = GetComponentsInChildren<Transform>(true);
-        Transform[] foundBagGrids = allChildren.FindAll(this => t.name.Contains("BagGrid")).OrderBy(t => t.name);
-        foreach (Transform t in foundBagGrids)
+        foreach (Transform child in allChildren)
         {
-            bagGrids.Add(t.gameObject);
+            if (child.name.Contains("BagGrid"))
+            {
+                bagGrids[int.Parse(child.name.Substring(7))] = child.gameObject;
+            }
         }
     }
 
