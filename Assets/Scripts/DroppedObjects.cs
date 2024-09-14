@@ -6,11 +6,10 @@ public class DroppedObjects : MonoBehaviour
 {
     float autoPickupRange;
     float autoPickupCheckOK;
+    float autoPickupSpeedScale;
     float autoPickupSpeedMax;
     float autoPickupSleepTime;
-    GameObject[] UIs;
-    GameObject bag;
-    GameObject player;
+    GameObject bag, player;
 
     float sleepTime;
 
@@ -19,19 +18,17 @@ public class DroppedObjects : MonoBehaviour
     {
         autoPickupRange = Config.instance.autoPickupRange;
         autoPickupCheckOK = Config.instance.autoPickupCheckOK;
+        autoPickupSpeedScale = Config.instance.autoPickupSpeedScale;
         autoPickupSpeedMax = Config.instance.autoPickupSpeedMax;
         autoPickupSleepTime = Config.instance.autoPickupSleepTime;
 
-        UIs = GameObject.FindGameObjectsWithTag("UI");
-        foreach (GameObject i in UIs)
-        {
-            if (i.name == "Bag")
-            {
-                bag = i;
-                break;
-            }
-        }
+        bag = GameObject.FindWithTag("Bag");
         player = bag.GetComponent<BagEvent>().owner;
+
+        if (player == null)
+        {
+            Debug.LogWarning("No player found for dropped objects");
+        }
 
         sleepTime = 0f;
     }
@@ -65,7 +62,7 @@ public class DroppedObjects : MonoBehaviour
                 //move towards player
                 Vector3 toPlayerDirection = player.transform.position - transform.position;
                 toPlayerDirection.Normalize();
-                float step = 1 / toPlayerDistance;
+                float step = autoPickupSpeedScale / toPlayerDistance;
                 if (step > autoPickupSpeedMax) step = autoPickupSpeedMax;
                 transform.position += toPlayerDirection * step * Time.deltaTime;
             }
