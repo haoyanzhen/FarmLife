@@ -10,10 +10,9 @@ public class BagGridEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     string currentToolName;
     private Vector2 bagItemDraggingShift = new Vector2(30, 250);
     int selfIndex;
-    // Start is called before the first frame update
-    void Start()
+    
+    private void Awake()
     {
-        //Click
         //Clean all sub objects and Add empty sub object
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -25,7 +24,10 @@ public class BagGridEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         // toolUI.transform.position = transform.position;
         // toolUI.GetComponent<RectTransform>().sizeDelta = new Vector2(80, 80);
         bagItem.name = "BagItem";
+    }
 
+    void Start()
+    {
         Transform bagTransform = transform.parent.parent;
         if (bagTransform != null)
         {
