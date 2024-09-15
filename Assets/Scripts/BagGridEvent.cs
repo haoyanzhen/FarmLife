@@ -104,6 +104,11 @@ public class BagGridEvent : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public void ChangeBagItemSprite(string toolName)
     {
         // Debug.Log("Change: " + this.gameObject.name + "-" + toolName);
+        if (bagItem == null) Debug.LogWarning("bagItem is null!");  //lock
+        if (bagItem.GetComponent<Image>() == null) Debug.LogWarning("bagItem.GetComponent<Image>() is null!");
+        if (bagItem.GetComponent<Image>().sprite == null) Debug.LogWarning("bagItem.GetComponent<Image>().sprite is null!");
+        // Debug.Log("bagitem.GetComponent<Image>().sprite.name: " + bagItem.GetComponent<Image>().sprite.name);
+        if (Resources.Load<Sprite>("Pictures/self/" + toolName) == null) Debug.LogWarning("Can't find tool: " + toolName);
         bagItem.GetComponent<Image>().sprite = Resources.Load<Sprite>("Pictures/self/" + toolName);
         
         //change self item name in bag event.

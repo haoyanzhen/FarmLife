@@ -46,11 +46,13 @@ public class BagEvent : MonoBehaviour
             }
         }
         //give player basic tools
+        Debug.Log("give player basic tools");
         toolNameList = Config.instance.tools;
         for (int i = 0; i < 6; i++)
         {
             bagGrids[i].GetComponent<BagGridEvent>().ChangeBagItemSprite(toolNameList[i]);
         }
+        Debug.Log("give player basic tools done");
 
         //initialize bagSlices
         bagSlices = new GameObject[3];
@@ -58,16 +60,17 @@ public class BagEvent : MonoBehaviour
         {
             if (child.name.Contains("BagSlice"))
             {
-                Debug.Log(child.name);
+                // Debug.Log(child.name);
                 int index = (int)child.name[8]-'0';
                 index--;
-                Debug.Log(index);
+                // Debug.Log(index);
                 if (index >= 0 && index < bagSlices.Length)
                 {
                     bagSlices[index] = child.gameObject;
                 }
             }
         }
+        Debug.Log("initialize bagSlices done");
         //check if all bagSlices are assigned
         for (int i = 0; i < bagSlices.Length; i++)
         {
