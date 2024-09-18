@@ -48,9 +48,8 @@ public class EquipToolkit : MonoBehaviour
         
     }
 
-    public void GetToolAndEquip(GameObject tool)
+    public void GetToolAndEquip(string toolName)
     {
-        string toolName = tool.GetComponent<Image>().sprite.name;
         toolGO.transform.localPosition = toolNameToPosition[toolName];
         SpriteRenderer toolSpriteRenderer = toolGO.GetComponent<SpriteRenderer>();
         Sprite newToolSprite = Resources.Load<Sprite>("Pictures/self/"+toolName);

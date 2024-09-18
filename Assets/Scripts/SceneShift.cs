@@ -26,8 +26,8 @@ public class SceneShift : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("Square", LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync("Home");
+            SceneManager.LoadScene("Square");
+            // SceneManager.UnloadSceneAsync("Home");
         }
     }
 }

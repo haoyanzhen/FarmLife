@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class BagEvent : MonoBehaviour
@@ -9,7 +10,7 @@ public class BagEvent : MonoBehaviour
     public GameObject owner;
     public string[] toolNameList;
     public string[] itemNames;
-    public int currentBagSlice;
+    public int currentBagSlice, currentBagItemIndex;
     public GameObject[] bagGrids, bagSlices;
     public GameObject menu, help;
 
@@ -37,6 +38,7 @@ public class BagEvent : MonoBehaviour
                 }
             }
         }
+        currentBagItemIndex = 0;
         //check if all bagGrids are assigned
         for (int i = 0; i < bagGrids.Length; i++)
         {
@@ -61,7 +63,7 @@ public class BagEvent : MonoBehaviour
             if (child.name.Contains("BagSlice"))
             {
                 // Debug.Log(child.name);
-                int index = (int)child.name[8]-'0';
+                int index = child.name[8] - '0';
                 index--;
                 // Debug.Log(index);
                 if (index >= 0 && index < bagSlices.Length)
@@ -94,15 +96,20 @@ public class BagEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void ChooseTool(GameObject tool)
+    public void ChooseTool(GameObject bagGrid)
     {
+        //get index
+        currentBagItemIndex = int.Parse(bagGrid.name.Substring(7));
+        currentBagItemIndex--;
+
+        //equip
         EquipToolkit equipTool = owner.GetComponent<EquipToolkit>();
         if (equipTool != null)
         {
-            equipTool.GetToolAndEquip(tool);
+            equipTool.GetToolAndEquip(bagGrid.transform.GetChild(0).gameObject.GetComponent<Image>().sprite.name);
         }
     }
 
@@ -113,7 +120,7 @@ public class BagEvent : MonoBehaviour
         {
             if (itemNames[i] == "Empty")
             {
-                Debug.Log("AutoPickup: "+ bagGrids[i].name);
+                Debug.Log("AutoPickup: " + bagGrids[i].name);
                 bagGrids[i].GetComponent<BagGridEvent>();
                 bagGrids[i].GetComponent<BagGridEvent>().ChangeBagItemSprite(itemName);
                 return true;
@@ -130,12 +137,33 @@ public class BagEvent : MonoBehaviour
             bagSlices[currentBagSlice].SetActive(false);
             currentBagSlice = (currentBagSlice + 1) % 3;
             bagSlices[currentBagSlice].SetActive(true);
-        } else
+        }
+        else
         {
             bagSlices[currentBagSlice].SetActive(false);
             currentBagSlice = (currentBagSlice + 2) % 3;
             bagSlices[currentBagSlice].SetActive(true);
         }
+    }
+
+    public void OnUseItem(int keyid)
+    {
+        ChooseTool(bagGrids[keyid - 1 + 10 * currentBagSlice]);
+        owner.GetComponent<CharacterControl>().OnUseTool(keyid);
+    }
+
+    public void OnScrollItem(InputAction.CallbackContext context)
+    {
+        bool scrolling = context.ReadValueAsButton();
+        if (scrolling)
+        {
+            currentBagItemIndex = (currentBagItemIndex + 1) % 30;
+        }
+        else
+        {
+            currentBagItemIndex = (currentBagItemIndex + 29) % 30;
+        }
+        ChooseTool(bagGrids[currentBagItemIndex]);
     }
 
 

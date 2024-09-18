@@ -37,15 +37,6 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""ChangeBagSlice"",
-                    ""type"": ""Button"",
-                    ""id"": ""cc9bfbd2-6d11-4306-871d-b14123de63c5"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""UseTools"",
                     ""type"": ""Button"",
                     ""id"": ""2ae0f915-da42-46bd-8e53-e12af81cf75a"",
@@ -257,72 +248,6 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""QE"",
-                    ""id"": ""97c9e9ac-9318-41f8-a3ad-7e856da2a817"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeBagSlice"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""a0b3816b-95a6-4571-a0b3-0c72b535f56c"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeBagSlice"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""ed82386a-f84e-4bbe-a8a0-6c53e134c430"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeBagSlice"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Left/Right Shoulder on Gamepad"",
-                    ""id"": ""d02218d1-29e0-415b-a9e5-6f8919afa95b"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeBagSlice"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""89ce5cff-0bc8-4b3a-a725-13ca3f246213"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeBagSlice"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""60ba2d98-ce42-4827-b150-80bf44a3686d"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeBagSlice"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""dba55dba-ba4f-4c84-81dd-cdadfb975451"",
                     ""path"": ""<Keyboard>/f"",
@@ -337,6 +262,17 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""a2c28e93-918a-49e9-bfda-a9d76e965630"",
                     ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseTools"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dbafb64e-ff4b-4021-a879-d702a813a009"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -484,7 +420,6 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
         // OnGround
         m_OnGround = asset.FindActionMap("OnGround", throwIfNotFound: true);
         m_OnGround_Move = m_OnGround.FindAction("Move", throwIfNotFound: true);
-        m_OnGround_ChangeBagSlice = m_OnGround.FindAction("ChangeBagSlice", throwIfNotFound: true);
         m_OnGround_UseTools = m_OnGround.FindAction("UseTools", throwIfNotFound: true);
         m_OnGround_UseItem1 = m_OnGround.FindAction("UseItem1", throwIfNotFound: true);
         m_OnGround_UseItem2 = m_OnGround.FindAction("UseItem2", throwIfNotFound: true);
@@ -558,7 +493,6 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_OnGround;
     private List<IOnGroundActions> m_OnGroundActionsCallbackInterfaces = new List<IOnGroundActions>();
     private readonly InputAction m_OnGround_Move;
-    private readonly InputAction m_OnGround_ChangeBagSlice;
     private readonly InputAction m_OnGround_UseTools;
     private readonly InputAction m_OnGround_UseItem1;
     private readonly InputAction m_OnGround_UseItem2;
@@ -575,7 +509,6 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
         private @CharacterAction m_Wrapper;
         public OnGroundActions(@CharacterAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_OnGround_Move;
-        public InputAction @ChangeBagSlice => m_Wrapper.m_OnGround_ChangeBagSlice;
         public InputAction @UseTools => m_Wrapper.m_OnGround_UseTools;
         public InputAction @UseItem1 => m_Wrapper.m_OnGround_UseItem1;
         public InputAction @UseItem2 => m_Wrapper.m_OnGround_UseItem2;
@@ -599,9 +532,6 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @ChangeBagSlice.started += instance.OnChangeBagSlice;
-            @ChangeBagSlice.performed += instance.OnChangeBagSlice;
-            @ChangeBagSlice.canceled += instance.OnChangeBagSlice;
             @UseTools.started += instance.OnUseTools;
             @UseTools.performed += instance.OnUseTools;
             @UseTools.canceled += instance.OnUseTools;
@@ -642,9 +572,6 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @ChangeBagSlice.started -= instance.OnChangeBagSlice;
-            @ChangeBagSlice.performed -= instance.OnChangeBagSlice;
-            @ChangeBagSlice.canceled -= instance.OnChangeBagSlice;
             @UseTools.started -= instance.OnUseTools;
             @UseTools.performed -= instance.OnUseTools;
             @UseTools.canceled -= instance.OnUseTools;
@@ -707,7 +634,6 @@ public partial class @CharacterAction: IInputActionCollection2, IDisposable
     public interface IOnGroundActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnChangeBagSlice(InputAction.CallbackContext context);
         void OnUseTools(InputAction.CallbackContext context);
         void OnUseItem1(InputAction.CallbackContext context);
         void OnUseItem2(InputAction.CallbackContext context);

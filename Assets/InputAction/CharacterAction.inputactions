@@ -15,15 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ChangeBagSlice",
-                    "type": "Button",
-                    "id": "cc9bfbd2-6d11-4306-871d-b14123de63c5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "UseTools",
                     "type": "Button",
                     "id": "2ae0f915-da42-46bd-8e53-e12af81cf75a",
@@ -235,72 +226,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "QE",
-                    "id": "97c9e9ac-9318-41f8-a3ad-7e856da2a817",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeBagSlice",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "a0b3816b-95a6-4571-a0b3-0c72b535f56c",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeBagSlice",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "ed82386a-f84e-4bbe-a8a0-6c53e134c430",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeBagSlice",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Left/Right Shoulder on Gamepad",
-                    "id": "d02218d1-29e0-415b-a9e5-6f8919afa95b",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeBagSlice",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "89ce5cff-0bc8-4b3a-a725-13ca3f246213",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeBagSlice",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "60ba2d98-ce42-4827-b150-80bf44a3686d",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeBagSlice",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "dba55dba-ba4f-4c84-81dd-cdadfb975451",
                     "path": "<Keyboard>/f",
@@ -315,6 +240,17 @@
                     "name": "",
                     "id": "a2c28e93-918a-49e9-bfda-a9d76e965630",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseTools",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dbafb64e-ff4b-4021-a879-d702a813a009",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

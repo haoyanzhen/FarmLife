@@ -35,6 +35,114 @@ public partial class @UIAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeBagSlice"",
+                    ""type"": ""Button"",
+                    ""id"": ""f1b8b737-81bb-46d1-8957-90fda4500041"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ScrollItem"",
+                    ""type"": ""Button"",
+                    ""id"": ""4dda3aa6-821d-47fc-bb04-02567e8330cb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem1"",
+                    ""type"": ""Button"",
+                    ""id"": ""382167a2-de6a-40f0-80c9-64b4d8627ac1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem2"",
+                    ""type"": ""Button"",
+                    ""id"": ""2575dfa3-ead1-4280-a393-8a12a691ae3a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem3"",
+                    ""type"": ""Button"",
+                    ""id"": ""14a7e5e8-f63a-457e-a051-c11c78c884a9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem4"",
+                    ""type"": ""Button"",
+                    ""id"": ""add6e635-b1fe-4eeb-bb38-d6b7e230be08"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem5"",
+                    ""type"": ""Button"",
+                    ""id"": ""07fc6b0c-8bf1-4fbe-8d0e-899044eeb22c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem6"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc0c9b5d-28b9-482e-b7a8-13d50330110d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem7"",
+                    ""type"": ""Button"",
+                    ""id"": ""7e32535d-ebe2-4f1e-b7db-b9be771e2ad0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem8"",
+                    ""type"": ""Button"",
+                    ""id"": ""de0cb2e7-ba0d-4091-b52b-2e20a2add94a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem9"",
+                    ""type"": ""Button"",
+                    ""id"": ""625591e0-4ed8-4048-94d7-9b6933cb8b90"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseItem10"",
+                    ""type"": ""Button"",
+                    ""id"": ""ed43f816-067a-4259-8324-a828cef94537"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -46,6 +154,215 @@ public partial class @UIAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""CallMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""QE"",
+                    ""id"": ""6fd5a5a0-04a8-4263-a1e3-8738ccd0a6c6"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBagSlice"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""5063c1da-55bb-4b1a-a7f3-ac1c899cbbac"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBagSlice"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""6779fcce-7930-4f82-acb6-3145583e4aef"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBagSlice"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""L/RB"",
+                    ""id"": ""4543c5f2-d49e-40da-9d62-07fe53023b03"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBagSlice"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""b9819aff-e976-4a23-9784-a04906d4f7f2"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBagSlice"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""0ecbb231-5eb1-45b2-99f1-0d08ef6873c2"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBagSlice"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""0e60807b-29b7-4cde-baa4-963b16678ecb"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollItem"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""6936d66c-e721-4a20-aece-911a220ac65b"",
+                    ""path"": ""<Mouse>/scroll/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""a23aa19f-d98c-480e-8248-77ba89f3fa16"",
+                    ""path"": ""<Mouse>/scroll/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c3d71a5-c7c1-42ed-8859-3a0fb29bc6c5"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e2f160a-8467-488e-ae85-271bb20e928b"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""029628a1-36be-48e2-b127-7d8cbd9d7bd9"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""add73f87-9d3c-4397-a9f8-11383e4c55b8"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2924a691-569b-4e1a-8f1a-fd2dfc42f559"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4d3ac978-96aa-4c0a-876a-fb0ebd341ec7"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87aee15b-b80f-42a2-8cfa-32f56adb65d5"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem7"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d76c9835-0fd9-4aae-9a33-ec308a493487"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""15062083-3941-44ba-bffa-a1d5bad3653b"",
+                    ""path"": ""<Keyboard>/9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem9"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de445e21-bfe7-4cd7-bf94-e0f01c9103d3"",
+                    ""path"": ""<Keyboard>/0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem10"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -79,6 +396,18 @@ public partial class @UIAction: IInputActionCollection2, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_CallMenu = m_UI.FindAction("CallMenu", throwIfNotFound: true);
+        m_UI_ChangeBagSlice = m_UI.FindAction("ChangeBagSlice", throwIfNotFound: true);
+        m_UI_ScrollItem = m_UI.FindAction("ScrollItem", throwIfNotFound: true);
+        m_UI_UseItem1 = m_UI.FindAction("UseItem1", throwIfNotFound: true);
+        m_UI_UseItem2 = m_UI.FindAction("UseItem2", throwIfNotFound: true);
+        m_UI_UseItem3 = m_UI.FindAction("UseItem3", throwIfNotFound: true);
+        m_UI_UseItem4 = m_UI.FindAction("UseItem4", throwIfNotFound: true);
+        m_UI_UseItem5 = m_UI.FindAction("UseItem5", throwIfNotFound: true);
+        m_UI_UseItem6 = m_UI.FindAction("UseItem6", throwIfNotFound: true);
+        m_UI_UseItem7 = m_UI.FindAction("UseItem7", throwIfNotFound: true);
+        m_UI_UseItem8 = m_UI.FindAction("UseItem8", throwIfNotFound: true);
+        m_UI_UseItem9 = m_UI.FindAction("UseItem9", throwIfNotFound: true);
+        m_UI_UseItem10 = m_UI.FindAction("UseItem10", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,11 +470,35 @@ public partial class @UIAction: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_CallMenu;
+    private readonly InputAction m_UI_ChangeBagSlice;
+    private readonly InputAction m_UI_ScrollItem;
+    private readonly InputAction m_UI_UseItem1;
+    private readonly InputAction m_UI_UseItem2;
+    private readonly InputAction m_UI_UseItem3;
+    private readonly InputAction m_UI_UseItem4;
+    private readonly InputAction m_UI_UseItem5;
+    private readonly InputAction m_UI_UseItem6;
+    private readonly InputAction m_UI_UseItem7;
+    private readonly InputAction m_UI_UseItem8;
+    private readonly InputAction m_UI_UseItem9;
+    private readonly InputAction m_UI_UseItem10;
     public struct UIActions
     {
         private @UIAction m_Wrapper;
         public UIActions(@UIAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @CallMenu => m_Wrapper.m_UI_CallMenu;
+        public InputAction @ChangeBagSlice => m_Wrapper.m_UI_ChangeBagSlice;
+        public InputAction @ScrollItem => m_Wrapper.m_UI_ScrollItem;
+        public InputAction @UseItem1 => m_Wrapper.m_UI_UseItem1;
+        public InputAction @UseItem2 => m_Wrapper.m_UI_UseItem2;
+        public InputAction @UseItem3 => m_Wrapper.m_UI_UseItem3;
+        public InputAction @UseItem4 => m_Wrapper.m_UI_UseItem4;
+        public InputAction @UseItem5 => m_Wrapper.m_UI_UseItem5;
+        public InputAction @UseItem6 => m_Wrapper.m_UI_UseItem6;
+        public InputAction @UseItem7 => m_Wrapper.m_UI_UseItem7;
+        public InputAction @UseItem8 => m_Wrapper.m_UI_UseItem8;
+        public InputAction @UseItem9 => m_Wrapper.m_UI_UseItem9;
+        public InputAction @UseItem10 => m_Wrapper.m_UI_UseItem10;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -158,6 +511,42 @@ public partial class @UIAction: IInputActionCollection2, IDisposable
             @CallMenu.started += instance.OnCallMenu;
             @CallMenu.performed += instance.OnCallMenu;
             @CallMenu.canceled += instance.OnCallMenu;
+            @ChangeBagSlice.started += instance.OnChangeBagSlice;
+            @ChangeBagSlice.performed += instance.OnChangeBagSlice;
+            @ChangeBagSlice.canceled += instance.OnChangeBagSlice;
+            @ScrollItem.started += instance.OnScrollItem;
+            @ScrollItem.performed += instance.OnScrollItem;
+            @ScrollItem.canceled += instance.OnScrollItem;
+            @UseItem1.started += instance.OnUseItem1;
+            @UseItem1.performed += instance.OnUseItem1;
+            @UseItem1.canceled += instance.OnUseItem1;
+            @UseItem2.started += instance.OnUseItem2;
+            @UseItem2.performed += instance.OnUseItem2;
+            @UseItem2.canceled += instance.OnUseItem2;
+            @UseItem3.started += instance.OnUseItem3;
+            @UseItem3.performed += instance.OnUseItem3;
+            @UseItem3.canceled += instance.OnUseItem3;
+            @UseItem4.started += instance.OnUseItem4;
+            @UseItem4.performed += instance.OnUseItem4;
+            @UseItem4.canceled += instance.OnUseItem4;
+            @UseItem5.started += instance.OnUseItem5;
+            @UseItem5.performed += instance.OnUseItem5;
+            @UseItem5.canceled += instance.OnUseItem5;
+            @UseItem6.started += instance.OnUseItem6;
+            @UseItem6.performed += instance.OnUseItem6;
+            @UseItem6.canceled += instance.OnUseItem6;
+            @UseItem7.started += instance.OnUseItem7;
+            @UseItem7.performed += instance.OnUseItem7;
+            @UseItem7.canceled += instance.OnUseItem7;
+            @UseItem8.started += instance.OnUseItem8;
+            @UseItem8.performed += instance.OnUseItem8;
+            @UseItem8.canceled += instance.OnUseItem8;
+            @UseItem9.started += instance.OnUseItem9;
+            @UseItem9.performed += instance.OnUseItem9;
+            @UseItem9.canceled += instance.OnUseItem9;
+            @UseItem10.started += instance.OnUseItem10;
+            @UseItem10.performed += instance.OnUseItem10;
+            @UseItem10.canceled += instance.OnUseItem10;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -165,6 +554,42 @@ public partial class @UIAction: IInputActionCollection2, IDisposable
             @CallMenu.started -= instance.OnCallMenu;
             @CallMenu.performed -= instance.OnCallMenu;
             @CallMenu.canceled -= instance.OnCallMenu;
+            @ChangeBagSlice.started -= instance.OnChangeBagSlice;
+            @ChangeBagSlice.performed -= instance.OnChangeBagSlice;
+            @ChangeBagSlice.canceled -= instance.OnChangeBagSlice;
+            @ScrollItem.started -= instance.OnScrollItem;
+            @ScrollItem.performed -= instance.OnScrollItem;
+            @ScrollItem.canceled -= instance.OnScrollItem;
+            @UseItem1.started -= instance.OnUseItem1;
+            @UseItem1.performed -= instance.OnUseItem1;
+            @UseItem1.canceled -= instance.OnUseItem1;
+            @UseItem2.started -= instance.OnUseItem2;
+            @UseItem2.performed -= instance.OnUseItem2;
+            @UseItem2.canceled -= instance.OnUseItem2;
+            @UseItem3.started -= instance.OnUseItem3;
+            @UseItem3.performed -= instance.OnUseItem3;
+            @UseItem3.canceled -= instance.OnUseItem3;
+            @UseItem4.started -= instance.OnUseItem4;
+            @UseItem4.performed -= instance.OnUseItem4;
+            @UseItem4.canceled -= instance.OnUseItem4;
+            @UseItem5.started -= instance.OnUseItem5;
+            @UseItem5.performed -= instance.OnUseItem5;
+            @UseItem5.canceled -= instance.OnUseItem5;
+            @UseItem6.started -= instance.OnUseItem6;
+            @UseItem6.performed -= instance.OnUseItem6;
+            @UseItem6.canceled -= instance.OnUseItem6;
+            @UseItem7.started -= instance.OnUseItem7;
+            @UseItem7.performed -= instance.OnUseItem7;
+            @UseItem7.canceled -= instance.OnUseItem7;
+            @UseItem8.started -= instance.OnUseItem8;
+            @UseItem8.performed -= instance.OnUseItem8;
+            @UseItem8.canceled -= instance.OnUseItem8;
+            @UseItem9.started -= instance.OnUseItem9;
+            @UseItem9.performed -= instance.OnUseItem9;
+            @UseItem9.canceled -= instance.OnUseItem9;
+            @UseItem10.started -= instance.OnUseItem10;
+            @UseItem10.performed -= instance.OnUseItem10;
+            @UseItem10.canceled -= instance.OnUseItem10;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -194,5 +619,17 @@ public partial class @UIAction: IInputActionCollection2, IDisposable
     public interface IUIActions
     {
         void OnCallMenu(InputAction.CallbackContext context);
+        void OnChangeBagSlice(InputAction.CallbackContext context);
+        void OnScrollItem(InputAction.CallbackContext context);
+        void OnUseItem1(InputAction.CallbackContext context);
+        void OnUseItem2(InputAction.CallbackContext context);
+        void OnUseItem3(InputAction.CallbackContext context);
+        void OnUseItem4(InputAction.CallbackContext context);
+        void OnUseItem5(InputAction.CallbackContext context);
+        void OnUseItem6(InputAction.CallbackContext context);
+        void OnUseItem7(InputAction.CallbackContext context);
+        void OnUseItem8(InputAction.CallbackContext context);
+        void OnUseItem9(InputAction.CallbackContext context);
+        void OnUseItem10(InputAction.CallbackContext context);
     }
 }

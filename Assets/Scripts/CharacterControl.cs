@@ -29,7 +29,6 @@ public class CharacterControl : MonoBehaviour
         characterAction.OnGround.Move.performed -= OnMovePerformed;
         characterAction.OnGround.Move.canceled -= OnMoveCanceled;
         characterAction.OnGround.UseTools.performed -= OnUseTool;
-        if (bag!= null) characterAction.OnGround.ChangeBagSlice.performed -= bag.GetComponent<BagEvent>().ShiftBagSlice;
     }
 
     void Start()
@@ -38,7 +37,6 @@ public class CharacterControl : MonoBehaviour
         animator = GetComponent<Animator>();
 
         bag = GameObject.FindWithTag("Bag");
-        characterAction.OnGround.ChangeBagSlice.performed += bag.GetComponent<BagEvent>().ShiftBagSlice;
     }
 
     void Update()
@@ -70,7 +68,12 @@ public class CharacterControl : MonoBehaviour
 
     private void OnUseTool(InputAction.CallbackContext context)
     {
-        Debug.Log("Use Tool: "+context.ReadValueAsButton());
+        Debug.Log("Use Tool by F or click: "+context.ReadValueAsButton());
+    }
+
+    public void OnUseTool(int keyid)
+    {
+        Debug.Log("Use Tool by keyboard number: "+keyid);
     }
 
 }
